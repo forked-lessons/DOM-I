@@ -39,7 +39,7 @@ const siteContent = {
 
 // Image Sources
 
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', "img/logo.png")
 
 const codeImg = document.querySelector('#cta-img');
@@ -87,4 +87,16 @@ main.querySelectorAll('h4')[4].textContent = siteContent[`main-content`]["vision
 main.querySelectorAll('p')[4].textContent = siteContent[`main-content`]["vision-content"];
 
 
+// Contact
 
+const contact = document.querySelector(".contact");
+contact.querySelector('h4').textContent = siteContent.contact["contact-h4"];
+contact.querySelectorAll('p')[0].textContent = siteContent.contact["address"];
+contact.querySelectorAll('p')[1].textContent = siteContent.contact["phone"];
+contact.querySelectorAll('p')[2].textContent = siteContent.contact["email"];
+
+
+// Footer
+
+const footer = document.querySelector("footer");
+footer.querySelector('p').textContent = siteContent.footer["copyright"];
