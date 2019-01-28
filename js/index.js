@@ -43,11 +43,11 @@ const logo = document.getElementById("logo-img");
 logo.setAttribute('src', "img/logo.png")
 
 const codeImg = document.querySelector('#cta-img');
+
 codeImg.src = siteContent.cta["img-src"];
 
 const middleImg = document.querySelector('#middle-img')
 middleImg.src = siteContent[`main-content`]["middle-img-src"];
-
 
 // Nav
 
@@ -63,7 +63,7 @@ for (let i in navArray) {
 // cta
 
 const cta = document.querySelector(".cta");
-cta.querySelector('h1').textContent = siteContent.cta.h1;
+cta.querySelector('h1').innerHTML = 'DOM </br> IS </br> AWESOME';
 cta.querySelector('button').textContent = siteContent.cta.button;
 
 
@@ -100,3 +100,24 @@ contact.querySelectorAll('p')[2].textContent = siteContent.contact["email"];
 
 const footer = document.querySelector("footer");
 footer.querySelector('p').textContent = siteContent.footer["copyright"];
+
+
+// Add New Content
+
+// Create Nav Element
+for (let i in navArray) {
+  nav.querySelectorAll('a')[i].setAttribute('style', 'color:green')
+}
+
+const newNavElement1 = document.createElement('a');
+newNavElement1.textContent = 'Sign In';
+// newNavElement1.setAttribute('style', 'color:green')
+newNavElement1.href = "#";
+nav.prepend(newNavElement1)
+
+const newNavElement2 = document.createElement('a');
+newNavElement2.textContent = 'Sign Up';
+// newNavElement2.setAttribute('style', 'color:green')
+newNavElement2.href = "#";
+
+nav.prepend(newNavElement2);
